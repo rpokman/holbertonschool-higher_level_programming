@@ -12,17 +12,6 @@ Projet inclus ici (extrait) :
 - Manipuler les chaînes (indexing, slicing, concaténation).
 - Respecter le style officiel Python avec `pycodestyle`.
 
-## 🧭 Arborescence (partielle)
-- `python-hello_world/`  
-  - `2-print.py`  
-  - `3-print_number.py`  
-  - `4-print_float.py`  
-  - `5-print_string.py`  
-  - `6-concat.py`  
-  - `7-edges.py`  
-  - `8-concat_edges.py`  
-  - `9-easter_egg.py`  
-
 ## 📚 Ressources
 - Playlist d’introduction Python : “Learn to Program”.
 - “Whetting Your Appetite”.
