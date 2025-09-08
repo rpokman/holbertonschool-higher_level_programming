@@ -79,3 +79,6 @@ Exemples :
 - Le style doit respecter **pycodestyle (2.7.\*)**
 - Les fichiers seront testés avec `wc` pour la longueur
 - Aucun module externe n’est autorisé (sauf indication contraire)
+
+## Auteur
+Projet réalisé dans le cadre du cursus Holberton. ✨
