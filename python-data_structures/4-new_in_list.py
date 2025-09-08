@@ -6,4 +6,4 @@ def new_in_list(my_list, idx, element):
     elif idx >= len(my_list):
         return new_list
     new_list[idx] = element
-    return new_list[idx]
+    return new_list
