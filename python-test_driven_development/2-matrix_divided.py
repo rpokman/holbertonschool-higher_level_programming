@@ -1,31 +1,35 @@
 #!/usr/bin/python3
 """
-Module 0-add_integer
-Contains a function that add two integers
+Module 2-matrix_divided
+Contains a function to divide a matrix by a number
 """
-def add_integer(a, b=98):
+def matrix_divided(matrix, div):
     """
-    Adds two integers.
+    Divides all elements of a matrix by a number
     Args:
-        a (int or float): The first number.
-        b (int or float): The second number, defaults to 98.
+        matrix: list of lists of integers/floats
+        div: number to divide by (cannot be zero)
     Returns:
-        int: The integer sum of a and b.
+        list: new matrix with elements divided and rounded
     Raises:
-        TypeError: If a or b is not an integer or float.
+        TypeError: if matrix is not a valid matrix
+        TypeError: if rows have different sizes
+        TypeError: if div is not a number
+        ZeroDivisionError: if div is zero
     """
-    if not isinstance(a, (int, float)):
-        raise TypeError("a must be an integer")
-    if not isinstance(b, (int, float)):
-        raise TypeError("b must be an integer")
-    if isinstance(a, float):
-        if a != a:
-            raise TypeError("a must be an integer")
-        if a in [float('inf'), float('-inf')]:
-            raise TypeError("a must be an integer")
-    if isinstance(b, float):
-        if b != b:
-            raise TypeError("b must be an integer")
-        if b in [float('inf'), float('-inf')]:
-            raise TypeError("b must be an integer")
-    return int(a) + int(b)
+    if (not isinstance(matrix, list) or
+            not all(isinstance(row, list) for row in matrix)):
+        msg = "matrix must be a matrix (list of lists) of integers/floats"
+        raise TypeError(msg)
+    for row in matrix:
+        for element in row:
+            if not isinstance(element, (int, float)):
+                msg = "matrix must be a matrix (list of lists) of integers/floats"
+                raise TypeError(msg)
+    if not all(len(row) == len(matrix[0]) for row in matrix):
+        raise TypeError("Each row of the matrix must have the same size")
+    if not isinstance(div, (int, float)):
+        raise TypeError("div must be a number")
+    if div == 0:
+        raise ZeroDivisionError("division by zero")
+    return [[round(element / div, 2) for element in row] for row in matrix]
