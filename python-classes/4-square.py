@@ -16,7 +16,6 @@ class Square:
             TypeError: if size is not an integer
             ValueError: if size is less than 0
         """
-        # On passe par le setter pour centraliser la validation
         self.size = size
 
     @property
