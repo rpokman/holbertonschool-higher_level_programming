@@ -1,19 +1,25 @@
 #!/usr/bin/python3
 """
-Module 3-rectangle
+Module 6-rectangle
 Defines a Rectangle class with width, height,
-area, perimeter and string representation.
+area, perimeter, string representation,
+and keeps track of the number of instances.
 """
 
 
 class Rectangle:
-    number_of_instances = 0
     """
     Represents a rectangle.
-    Defines width and height, and provides
-    methods to compute area, perimeter,
-    and string representation.
+
+    Class attributes:
+        number_of_instances (int): Counter for the number of Rectangle.
+
+    Instance attributes:
+        width (int): The width of the rectangle (default 0).
+        height (int): The height of the rectangle (default 0).
     """
+
+    number_of_instances = 0
 
     def __init__(self, width=0, height=0):
         """Initialize a new Rectangle instance.
@@ -86,14 +92,19 @@ class Rectangle:
             return ""
 
         lignes = []
-        for i in range(self.height):
+        for _ in range(self.height):
             lignes.append("#" * self.width)
-
         return "\n".join(lignes)
 
     def __repr__(self):
+        """Return a string representation of the rectangle
+        that can be used to recreate a new instance with eval().
+        """
         return f"Rectangle({self.width}, {self.height})"
 
     def __del__(self):
+        """Print a message when a Rectangle instance is deleted,
+        and decrement the instance counter.
+        """
         Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
