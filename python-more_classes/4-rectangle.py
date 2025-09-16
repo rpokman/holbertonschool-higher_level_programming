@@ -178,6 +178,6 @@ class Rectangle:
             lignes.append("#" * self.width)
 
         return "\n".join(lignes)
-    
+
     def __repr__(self):
         return f"Rectangle({self.width}, {self.height})"
