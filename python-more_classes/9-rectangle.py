@@ -6,7 +6,7 @@ Defines a Rectangle class.
 
 
 class Rectangle:
-    """Rectangle class with width, height and utilities."""
+    """Rectangle class"""
 
     number_of_instances = 0
     print_symbol = "#"
@@ -59,8 +59,8 @@ class Rectangle:
         """String with print_symbol."""
         if self.width == 0 or self.height == 0:
             return ""
-        lignes = [str(self.print_symbol) * self.width for _ in range(self.height)]
-        return "\n".join(lignes)
+        li = [str(self.print_symbol) * self.width for _ in range(self.height)]
+        return "\n".join(li)
 
     def __repr__(self):
         """Return repr string."""
