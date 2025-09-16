@@ -20,6 +20,7 @@ class Rectangle:
     """
 
     number_of_instances = 0
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         """Initialize a new Rectangle instance.
@@ -93,7 +94,7 @@ class Rectangle:
 
         lignes = []
         for _ in range(self.height):
-            lignes.append("#" * self.width)
+            lignes.append(str(self.print_symbol) * self.width)
         return "\n".join(lignes)
 
     def __repr__(self):
