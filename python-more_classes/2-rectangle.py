@@ -50,3 +50,14 @@ class Rectangle:
         if self.width == 0 or self.height == 0:
             return 0
         return 2 * (self.width + self.height)
+
+    def __str__(self):
+        """Return a string with # drawing the rectangle."""
+        if self.width == 0 or self.height == 0:
+            return ""
+
+        lignes = []
+        for i in range(self.height):
+            lignes.append("#" * self.width)
+
+        return "\n".join(lignes)
