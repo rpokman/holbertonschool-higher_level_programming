@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Module defining a Student class with JSON serialization capability."""
+"""Module defining a Student class with JSON"""
 
 
 class Student:
@@ -21,10 +21,10 @@ class Student:
         """Retrieve a dictionary representation of the Student.
 
         If attrs is a list of strings, only attributes with names
-        in this list are included. Otherwise, all attributes are returned.
+        in this list are included.
 
         Args:
-            attrs (list, optional): List of attribute names to include.
+            attrs (list, optional): List of attribute names.
 
         Returns:
             dict: Dictionary representation of the Student.
