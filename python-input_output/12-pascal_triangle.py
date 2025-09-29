@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """a function that returns a list of intergers"""
+
+
 def pascal_triangle(n):
     """returns a list of lists of integers"""
     if n <= 0:
