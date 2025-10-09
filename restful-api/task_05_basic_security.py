@@ -9,7 +9,7 @@ from flask_jwt_extended import (
 
 app = Flask(__name__)
 
-app.config["JWT_SECRET_KEY"] = "changeme_to_a_strong_secret_key"
+app.config["JWT_SECRET_KEY"] = "abcd"
 jwt = JWTManager(app)
 
 auth = HTTPBasicAuth()
