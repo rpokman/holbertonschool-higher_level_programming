@@ -1,3 +1,4 @@
+--list data base
 Enter password: 
 Database                                                                                     
 information_schema                                                                           
