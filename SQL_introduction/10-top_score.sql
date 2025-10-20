@@ -1,0 +1,1 @@
+-- Lists all records of the table
