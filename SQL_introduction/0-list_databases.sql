@@ -1,7 +1,2 @@
---list data base
-Enter password: 
-Database                                                                                     
-information_schema                                                                           
-mysql                                                                                        
-performance_schema                                                                           
-sys
+-- List all databases in MySQL server
+SHOW DATABASES;
