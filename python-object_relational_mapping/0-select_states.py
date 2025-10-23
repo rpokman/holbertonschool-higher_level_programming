@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-"""Lists all states from the database hbtn_0e_0_usa"""
-
 import MySQLdb
 import sys
 
@@ -10,7 +8,7 @@ if __name__ == "__main__":
                          charset="utf8")
     cur = db.cursor()
     cur.execute("SELECT * FROM states ORDER BY id ASC")
-    for state in cur.fetchall():
-        print(state)
+    for row in cur.fetchall():
+        print(row)
     cur.close()
     db.close()
