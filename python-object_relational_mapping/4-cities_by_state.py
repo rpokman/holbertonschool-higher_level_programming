@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Takes in arguments and displays all values safe from MySQL injection."""
+"""Lists all cities from the database hbtn_0e_4_usa."""
 import sys
 import MySQLdb
 
@@ -12,9 +12,9 @@ if __name__ == "__main__":
         db=sys.argv[3]
     )
     c = db.cursor()
-    state_name = sys.argv[4]
-    c.execute("SELECT * FROM states WHERE name = %s ORDER BY id ASC",
-              (state_name,))
+    c.execute("""SELECT cities.id, cities.name, states.name FROM cities
+                 JOIN states ON cities.state_id = states.id
+                 ORDER BY cities.id ASC""")
     for row in c.fetchall():
         print(row)
     c.close()
