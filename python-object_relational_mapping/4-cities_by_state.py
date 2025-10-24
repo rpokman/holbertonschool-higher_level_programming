@@ -1,21 +1,26 @@
 #!/usr/bin/python3
-"""Lists all cities from the database hbtn_0e_4_usa."""
-import sys
+"""Script that lists all cities from the database hbtn_0e_4_usa"""
 import MySQLdb
+import sys
+
 
 if __name__ == "__main__":
     db = MySQLdb.connect(
-        host="127.0.0.1",
         port=3306,
+        host="localhost",
         user=sys.argv[1],
         passwd=sys.argv[2],
         db=sys.argv[3]
+        )
+    cursor = db.cursor()
+    cursor.execute(
+        "SELECT cities.id, cities.name, states.name "
+        "FROM cities "
+        "JOIN states ON cities.state_id = states.id "
+        "ORDER BY cities.id ASC"
     )
-    c = db.cursor()
-    c.execute("""SELECT cities.id, cities.name, states.name FROM cities
-                 JOIN states ON cities.state_id = states.id
-                 ORDER BY cities.id ASC""")
-    for row in c.fetchall():
+    query_rows = cursor.fetchall()
+    for row in query_rows:
         print(row)
-    c.close()
+    cursor.close()
     db.close()
