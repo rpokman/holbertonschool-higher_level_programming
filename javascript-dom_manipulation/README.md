@@ -131,7 +131,7 @@ google-chrome 0-main.html
 
 ## Author
 
-rpok
+[rpok](https://github.com/rpokman)
 
 ## License
 
