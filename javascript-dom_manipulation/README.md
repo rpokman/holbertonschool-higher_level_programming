@@ -1,5 +1,9 @@
 # JavaScript - DOM Manipulation
 
+<div align="right">
+  <a href="README.md">🇬🇧 English</a> | <a href="README_FR.md">🇫🇷 Français</a>
+</div>
+
 ![JavaScript DOM Manipulation Banner](../images/JavaScript%20DOM%20manipulation.jpg)
 
 ## Description
