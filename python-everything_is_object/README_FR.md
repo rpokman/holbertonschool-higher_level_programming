@@ -33,6 +33,7 @@ Ce projet est unique car il se concentre sur la compréhension des mécanismes i
 
 ## Ressources
 
+- [Article de Blog : Python - Tout est un Objet](https://github.com/rpokman/Python---Everything-is-object-Blog-Post)
 - [9.10. Objects and values](https://docs.python.org/fr/3/tutorial/classes.html#objects-and-values)
 - [9.11. Aliasing](https://docs.python.org/fr/3/tutorial/classes.html#aliasing)
 - [Immutable vs mutable types](https://www.geeksforgeeks.org/mutable-vs-immutable-objects-in-python/)

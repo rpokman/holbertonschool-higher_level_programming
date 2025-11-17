@@ -33,6 +33,7 @@ At the end of this project, you should be able to explain without help:
 
 ## Resources
 
+- [Blog Post: Python - Everything is an Object](https://github.com/rpokman/Python---Everything-is-object-Blog-Post)
 - [9.10. Objects and values](https://docs.python.org/3/tutorial/classes.html#objects-and-values)
 - [9.11. Aliasing](https://docs.python.org/3/tutorial/classes.html#aliasing)
 - [Immutable vs mutable types](https://www.geeksforgeeks.org/mutable-vs-immutable-objects-in-python/)
